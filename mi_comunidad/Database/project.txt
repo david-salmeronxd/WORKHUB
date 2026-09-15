@@ -1,0 +1,9 @@
+=============== Derechos de autor =============
+
+Creador de la api:
+https://github.com/francisco-canales
+
+
+Se uso para automatizar el proceso de nuestra app hecha en dart
+para el manejo de los datos
+atte: David Salmeron 8/29/2026
