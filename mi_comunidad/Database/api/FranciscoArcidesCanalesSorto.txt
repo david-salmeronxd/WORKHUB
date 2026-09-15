@@ -1,0 +1,67 @@
+
+
+ESTUDIANTE : Francisco Arcides Canales Sorto
+FECHA      : 2026-08-05
+
+----------------------------------------------------------------
+1. ENLACE PÚBLICO AL REPOSITORIO GITHUB
+----------------------------------------------------------------
+https://github.com/francisco-canales/ProyectoModulo8.git
+
+----------------------------------------------------------------
+2. URL PÚBLICA DE LA API DESPLEGADA
+----------------------------------------------------------------
+  https://api-modulo8.onrender.com
+
+
+Endpoints disponibles:
+  GET /health            -> monitoreo de operatividad
+  GET /productos         -> listar registros
+  GET /productos/:id     -> consultar un registro
+  POST /productos        -> agregar un registro
+
+----------------------------------------------------------------
+3. ENLACE AL DOCUMENTO DEL PLAN DE BACKUPS
+----------------------------------------------------------------
+https://github.com/francisco-canales/ProyectoModulo8/blob/main/docs/BACKUP_PLAN.md
+
+----------------------------------------------------------------
+4. EVIDENCIA DEL MONITOREO CONFIGURADO
+----------------------------------------------------------------
+https://api-modulo8.onrender.com/health
+Endpoint de salud implementado en src/monitoring.js y expuesto en GET /health.
+
+Respuesta real capturada en ejecución local (06-08-2026):
+
+  $ curl http://localhost:3000/health
+  {"status":"ok","db":"up","uptime":1.48,"timestamp":"2026-08-06T00:52:53.280Z","responseTimeMs":6}
+
+  - 200 => API y base de datos operativas (status: ok)
+
+
+----------------------------------------------------------------
+5. EVIDENCIA DEL PIPELINE CI/CD FUNCIONANDO
+----------------------------------------------------------------
+https://github.com/francisco-canales/ProyectoModulo8/actions
+Pipeline en .github/workflows/deploy.yml (GitHub Actions).
+
+Jobs:
+  1. test   -> npm ci + npm test + verificación de .env.example
+                (se ejecuta en cada push a main y en cada PR a main)
+  2. deploy -> se ejecuta solo en push a main, tras pasar `test`,
+                dispara el despliegue en Render vía API
+
+
+Evidencia de la validación local (mismo comando que ejecuta el pipeline):
+
+  $ npm test
+  ✔ GET / responde 200 con los endpoints
+  ✔ GET /health responde JSON con status
+  ✔ Ruta inexistente responde 404
+  tests 3, pass 3, fail 0
+
+Para ver la evidencia del pipeline en GitHub:
+  Actions > seleccionar workflow > revisar runs y badges.
+  https://github.com/francisco-canales/ProyectoModulo8/actions
+
+

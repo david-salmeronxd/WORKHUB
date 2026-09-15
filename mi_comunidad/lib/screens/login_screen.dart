@@ -17,7 +17,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   bool _isLoading = false;
   bool _obscurePassword = true;
-  bool _isSignUp = false; // Alterna entre Iniciar sesión y Crear cuenta
+  bool _isSignUp = false; 
 
   @override
   void dispose() {

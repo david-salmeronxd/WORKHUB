@@ -1,0 +1,27 @@
+{
+  "name": "api-workhub",
+  "version": "1.0.0",
+  "description": "API para workhub sacada del repositorio de francisco-canales",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "express",
+    "postgresql",
+    "api",
+    "devops"
+  ],
+  "author": "Kskfran",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "pg": "^8.12.0"
+  }
+}
