@@ -50,3 +50,6 @@ functions/node_modules/
 **/node_modules/
 .dart_tool/
 build/
+
+# FVM Version Cache
+.fvm/

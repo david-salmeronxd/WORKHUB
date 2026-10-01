@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/SHADOW/mi_comunidad/linux"
+  "cmake.sourceDirectory": "C:/Users/SHADOW/mi_comunidad/linux",
+  "dart.flutterSdkPath": ".fvm/versions/stable"
 }

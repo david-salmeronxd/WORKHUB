@@ -441,7 +441,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       const SizedBox(height: 12),
                       DropdownButtonFormField<String>(
-                        value: selectedCategoryForm,
+                        initialValue: selectedCategoryForm,
                         dropdownColor: const Color(0xFF141414),
                         style: const TextStyle(color: Colors.white, fontSize: 14),
                         decoration: _inputDecoration('Categoría'),
@@ -1007,7 +1007,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                     padding: const EdgeInsets.symmetric(horizontal: 16),
                     decoration: BoxDecoration(
-                      color: const Color(0xFF0D0D0D).withOpacity(0.92),
+                      color: const Color(0xFF0D0D0D).withValues(alpha: 0.92),
                       borderRadius: BorderRadius.circular(16),
                       border: Border.all(color: Colors.white24, width: 1.2),
                       boxShadow: const [BoxShadow(color: Colors.black, blurRadius: 15)],
@@ -1057,7 +1057,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               duration: const Duration(milliseconds: 150),
                               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                               decoration: BoxDecoration(
-                                color: isSelected ? Colors.white : const Color(0xFF0D0D0D).withOpacity(0.9),
+                                color: isSelected ? Colors.white : const Color(0xFF0D0D0D).withValues(alpha: 0.9),
                                 borderRadius: BorderRadius.circular(20),
                                 border: Border.all(
                                   color: isSelected ? Colors.white : Colors.white24,
@@ -1206,7 +1206,7 @@ class _HomeScreenState extends State<HomeScreen> {
               right: 16,
               child: Container(
                 decoration: BoxDecoration(
-                  color: const Color(0xFF0D0D0D).withOpacity(0.95),
+                  color: const Color(0xFF0D0D0D).withValues(alpha: 0.95),
                   borderRadius: BorderRadius.circular(24),
                   border: Border.all(color: Colors.white24, width: 1.2),
                   boxShadow: const [BoxShadow(color: Colors.black, blurRadius: 25)],
