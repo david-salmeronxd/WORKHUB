@@ -1,6 +1,11 @@
 # workhub
 
-ts is just a test
+This is just a test 
+Its an app that our teacher gave us as a project
+
+This app its based on Google maps but with other necesary stuff thats why we calle it 
+Mi_Comunidad
+
 
 ## Getting Started
 
